@@ -1,0 +1,1097 @@
+/*
+320 - 767px:      Phone
+768 - 1024px:    Tablette 
+900 - 1200px:   Tablette desktop
+[1200 - 1800] is where our normal styles apply
+1400px + :       desktop
+
+$breakpoint  à choisir:
+- phone
+- tab-port
+- desktop
+- big-desktop
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    line-height: 1.7;
+    font-weight: 400;
+    font-family: "Raleway", sans-serif, serif;
+    background-color: #F0F2F6;
+    color: #000;
+    padding: 0 3rem;
+
+    /* font-size: 1.2rem; */
+}
+
+/* .header,  .form, .filter-section, .filter, .footer {
+    
+    margin: 0 6rem;
+}
+
+.main__title, .main__para {
+    margin-left:  6rem; */
+
+
+
+
+h1,
+h2,
+h3,
+h4 {
+    /* font-family: "Raleway", sans-serif, serif; */
+    margin: inherit;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.icon {
+    color: #0065FC;
+}
+
+.alt {
+    color: #e6e7e9;
+}
+
+.bg-section {
+    padding: 3rem;
+    background-color: #e6e7e9;
+    border-radius: 2rem;
+}
+
+/* ===================================== HEADER ================================================ */
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ==================== Brand ====================== */
+.brand {
+    left: 0;
+    width: 10%;
+    height: 100%;
+    padding: 1.5rem 0 1.5rem 1rem;
+
+}
+
+.brand__logo-link img {
+    width: 100%;
+    text-align: center;
+
+}
+
+/* ==================== Nav ====================== */
+.nav {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav__bar {
+    width: 50%;
+    height: 100%;
+    padding-top: 3rem;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+
+.nav__bar-link {
+    height: 100%;
+    width: 100%;
+    font-size: 1.3rem;
+    margin: 0 auto;
+}
+
+.nav__bar:hover, .nav__bar-link:hover {
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
+}
+
+.nav__bar-link:hover {
+
+    border: none;
+}
+
+.nav .active,
+.nav .active>a {
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
+}
+
+.nav .active>a {
+    border: none;
+}
+
+/* ===================================== MAIN ================================================ */
+.main {
+    margin-bottom: 2rem;
+}
+
+.main__title {
+    font-size: 2.3rem;
+    margin-bottom: 0;
+    margin-left: 1rem;
+}
+
+.main__para {
+    font-size: 1.5rem;
+    margin: 0 0 2rem 1rem;
+}
+
+/* ===================================== Form ================================================ */
+
+.form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.form__label {
+    /* height: 4.9rem; */
+    font-size: 1.6rem;
+    border-right: none;
+    border: 0.1rem solid #F2F2F2;
+    border-radius: 1.5rem 0 0 1.5rem;
+    padding: 1.6rem 1.5rem;
+    align-items: center;
+    background-color: #e6e7e9;
+}
+
+.form__input {
+    background-color: #F2F2F2;
+    padding: 1.5rem 1.6rem 1.5rem 1.6rem;
+    color: #000;
+    width: 33.2rem;
+    height: 4.9rem;
+    border: 0.1rem solid #e6e7e9;
+    border-right: none;
+    border-left: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.form__input::-moz-placeholder {
+    color: #000;
+}
+
+.form__input::placeholder {
+    color: #000;
+}
+
+/* ===================================== Button ================================================ */
+.btn {
+    background-color: #0065FC;
+    color: #fff;
+    padding: 1.5rem 1.6rem;
+    width: 13.2rem;
+    height: 4.9rem;
+    border: 0.1rem solid #F2F2F2;
+    border-radius: 0 1.5rem 1.5rem 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.btn__icon {
+    visibility: hidden;
+}
+
+/* ===================================== Filter-Section ================================================ */
+.filter-section {
+    margin: 3rem 0;
+    width: 65vw;
+}
+
+.filter-section__para {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.filter-section__para-icon {
+    font-size: 1rem;
+    padding: 1rem;
+    border: 1px solid #e6e7e9;
+    border-radius: 50%;
+    margin-left: 0.3rem;
+}
+
+/* ===================================== Filter ================================================ */
+.filter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.filter__title {
+    width: 8%;
+    padding-top: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+}
+
+.filter__title-subtitle {
+    font-size: 1.5rem;
+    margin-top: 0.7rem;
+}
+
+.filter__cap {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 2rem;
+    align-items: center;
+    align-content: center;
+    font-size: 1.5rem;
+    border-radius: 5rem;
+    border: 2px solid #e6e7e9;
+    border-left: none;
+}
+
+.filter__cap-icon {
+    font-size: 2rem;
+    padding: 1.5rem;
+    border-radius: 2.5rem;
+    background-color: #cfdbec;
+}
+
+.filter__cap .person {
+    padding: 1.5rem 1.8rem;
+}
+
+.filter__cap-title {
+    width: 80%;
+    padding: 0.2rem;
+    text-align: center;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* ===================================== Splitter ================================================ */
+.spliter {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    font-size: 1.5rem;
+    border: none;
+}
+
+/* ===================================== WRAPPER ================================================ */
+.wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    /* height: 80vh; */
+    width: 100%;
+}
+
+/* ================================== WRAPPER 2 ===================================== */
+.wrapper2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 85%;
+}
+
+/* =======================================  RIGHT ================================================== */
+.right {
+    width: 25%;
+}
+
+.favorite {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.favorite__icon {
+    margin-top: 0.6rem;
+    font-size: 2rem;
+    color: #0065FC;
+}
+
+/* =======================================  LEFT ================================================== */
+.left {
+    width: 65%;
+}
+
+.more-link {
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+
+/* =======================================  ACTIVITE ================================================== */
+
+.activite {
+    margin: 5rem 0 2rem 0;
+}
+
+.grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* =======================================  CARD ================================================== */
+.card1__info-title,
+.card2__info-title,
+.card3__info-title {
+    font-size: 1.6rem;
+}
+
+.link-card1 {
+    width: 100%;
+}
+
+.link-card2 {
+    width: 31%;
+}
+
+.link-card3 {
+    width: 22%;
+}
+
+.card {
+    border-radius: 2rem;
+    background-color: #F0F2F6;
+}
+
+.card__picture {
+    height: 100%;
+}
+
+.card__picture-img {
+    height: 100%;
+    width: 100%;
+}
+
+.card__info {
+    padding: 0.5rem 0 0 1rem;
+}
+
+.card__info-title {
+    width: 100%;
+    font-size: 0.8rem;
+    line-height: 1;
+    margin: 1rem 0 0 0;
+}
+
+.card1 {
+    width: 100%;
+    height: 240px;
+    margin-bottom: 4rem;
+    padding: 0.5rem;
+    display: flex;
+}
+
+.card1__picture {
+    width: 40%;
+}
+
+.card1__picture-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem 0 0 2rem;
+}
+
+.card1__info {
+    width: 60%;
+    padding: 2rem;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card1__info-title {
+    margin-bottom: 1rem;
+    text-overflow: ellipsis;
+}
+
+.card2 {
+    width: 100%;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.card2__picture {
+    height: 65%;
+    width: 100%;
+}
+
+.card2__picture-img {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.card2__info {
+    height: 35%;
+    /* width: 100%; */
+    padding: 1rem;
+}
+
+.card2__info-title {
+    margin: 0.5rem;
+    line-height: 1;
+}
+
+.card2__info-para,
+.card2__info-note {
+    margin: 0.5rem;
+}
+
+
+.card3 {
+    height: 600px;
+    width: 22vw;
+    border: 1px solid #e6e7e9;
+    box-shadow: 2px 2px 2px #e6e7e9;
+}
+
+.card3__picture {
+    height: 90%;
+}
+
+.card3__picture-img {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.card3__info {
+    height: 6%;
+    padding: 1rem 2rem;
+}
+
+.card3__info-title {
+    text-overflow: ellipsis;
+    
+}
+
+/* ===================================== FOOTER ================================================ */
+.footer {
+    bottom: 0;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+    background-color: #e6e7e9;
+}
+
+.footer-lien {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footer-lien__title {
+    font-size: 1.6rem;
+    width: 100%;
+}
+
+.footer-lien__para {
+    margin: 0.2rem 0;
+}
+
+.footer-lien__para__para-link {
+    font-size: 1.3rem;
+}
+
+/* ===================================== RESPONSIVE ================================================ */
+/* ============================ BIG DESKTOP ======================================= */
+
+@media only screen and (min-width: 1440px) {
+    html {
+        font-size: 75%;
+    }
+
+    body {
+        margin: 0 auto;
+    }
+
+    .left {
+        width: 63%;
+    }
+
+    .right {
+        width: 25%;
+    }
+
+    .card1 {
+        width: 100%;
+        height: 190px;
+    }
+    .card2 {
+        width: 18vw;
+        height: 280px;
+    }
+}
+
+@media only screen and (max-width: 1439px) {
+    html {
+        font-size: 56.25%;
+    }
+
+    .left {
+        width: 62%;
+    }
+
+    .right {
+        width: 27%;
+    }
+
+    
+    .card1 {
+        width: 100%;
+        height: 170px;
+    }
+    .card2 {
+        width: 18vw;
+        height: 250px;
+    }
+    
+}
+
+/* =====================================  DESKTOP ================================================ */
+
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 56.25%;
+    }
+
+    .left {
+        width: 62%;
+    }
+
+    .right {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 1105px) {
+    html {
+        font-size: 56.25%;
+    }
+
+    .left {
+        width: 60%;
+    }
+
+    .right {
+        width: 26%;
+    }
+
+    .card1 {
+        width: 100%;
+        height: 150px;
+    }
+    .card2 {
+        width: 17vw;
+        height: 230px;
+    }
+    .card2__picture {
+        height: 75%;
+    }
+    .card2__info {
+        height: 25%;
+    }
+}
+/* ===================================== TAB ================================================ */
+
+@media only screen and (max-width: 1024px) and (min-width: 767px )  {
+    
+
+    html {
+        font-size: 50%;
+    }
+
+    body {
+        padding: 0 5rem;
+    }
+
+    h2 {
+        margin-bottom: 1rem;
+    }
+
+    /* ==================== Brand ====================== */
+
+    .brand {
+        height: 50%;
+    }
+
+    .brand__logo-link img {
+        width: 100%;
+    }
+
+    /* ==================== Wrapper ====================== */
+    .filter-section {
+        margin: 3rem 0;
+        width: 100%;
+    }
+
+    /* ==================== Wrapper ====================== */
+
+    .wrapper {
+        height: 100%;
+        width: 100%;
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .wrapper2 {
+        width: 98%;
+        padding: 0 2rem;
+    }
+
+    /* ==================== Right ====================== */
+
+    .right {
+        width: 95%;
+        margin: 2rem auto 0 auto;
+    }
+
+    .right .insert {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    /* ==================== Left ====================== */
+
+    .left {
+        width: 95%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    /* ==================== Card ====================== */
+    .card1 {
+        width: 25vw;
+        height: 18vh;
+        margin-right: 2rem;
+    }
+
+    .card2 {
+        width: 100%;
+        height: 300px;
+    }
+
+    .card2__info {
+        padding: 2rem 1rem;
+    }
+
+    .card3 {
+        width: 100%;
+        height: 330px;
+    }
+}
+
+
+
+/* ===================================== PHONE ================================================ */
+/* @media only screen and (max-width: 767px) and (min-width: 567px )  {} */
+
+
+@media only screen and (max-width: 767px) {
+    /*  {
+        box-shadow: 0 0 0 3px red inset;
+    } */
+    
+    body {
+        margin: 0;
+        padding: 0;
+        display: block;
+
+    }
+
+    a {
+        padding: 0;
+        margin: 0;
+    }
+
+    .bg-section {
+        padding: 0rem;
+        background-color: #e6e7e9;
+    }
+
+    .phone-alt {
+        /* padding: 0.5rem; */
+        background-color: #F0F2F6;
+    }
+
+    h2 {
+        margin: 1rem 0 2rem 1rem;
+        font-size: 2.5rem;
+    }
+
+    .header,
+    .main,
+    .footer {
+        width: 100%;
+        margin: 0;
+        /* padding:0; */
+    }
+
+    /* ==================== Header ====================== */
+
+    .header {
+        display: block;
+        text-align: center;
+    }
+
+    /* ========== Brand ========== */
+
+    .brand {
+        padding: 0;
+        width: 50vw;
+        margin: 0 auto;
+    }
+    
+    .brand__logo-link img {
+        width: 25vw;
+        text-align: center;
+        /* font-size: 20rem; */
+    }
+
+    /* ========== Nav ========== */
+
+    .nav {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .nav__bar {
+        padding-bottom: 4rem;
+    }
+
+    .nav__bar-link {
+        height: 100%;
+        width: 50%;
+        font-size: 1.8rem;
+    }
+
+    .nav .active,
+    .nav .active>a {
+        border-top: none;
+        color: #0065FC;
+        border-bottom: 2px solid #0065FC;
+    }
+
+    .nav__bar:hover, .nav__bar-link:hover {
+        color: #0065FC;
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+    }
+    
+    .nav__bar-link:hover {
+        border: none;
+    }
+
+    .nav .active>a {
+        border: none;
+    }
+
+    /* ==================== Main ====================== */
+
+    .main {
+        margin: 3rem 0;
+        width: 100%;
+    }
+
+    .main__title {
+        font-size: 2.3rem;
+    }
+
+    .main__para {
+        font-size: 1.5rem;
+    }
+
+    /* ========== Form ========== */
+    .form {
+        width: 100%;
+        margin: 1rem auto;
+    }
+
+    .form__input {
+        height: 4.8rem;
+        width: 100%;
+    }
+
+    /* ========== Button ========== */
+
+    .btn {
+        width: 5rem;
+    }
+
+    .btn__title {
+        display: none;
+    }
+
+    .btn__icon {
+        visibility: visible;
+    }
+
+    /* ========== Filter-Section ========== */
+    .filter-section {
+        /* padding: 0 2rem; */
+        width: 100%;
+    }
+
+    /* ========== Filter ========== */
+    .filter {
+        display: block;
+    }
+
+    .filter__cap {
+        width: 42%;
+        margin: 1rem;
+        font-size: 1.5rem;
+        border-left: 2px solid #e6e7e9;
+    }
+
+    .filter__cap-icon {
+        font-size: 2rem;
+        padding: 1.5rem;
+        border: none;
+        background-color: #F0F2F6;
+    }
+
+    /* ========== Splitter ========== */
+    .spliter {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: space-between; */
+    }
+
+    /* ========== Wrapper ========== */
+
+    .wrapper {
+        display: block;
+        width: 100%;
+    }
+
+    .wrapper2 {
+        width: 100%;
+        display: block;
+    }
+
+    /* ========== Right ========== */
+
+    .right {
+        width: 100%;
+        padding: 1rem 0;
+        border-radius: 0;
+        /* background-color: red; */
+    }
+
+    .right .insert {
+        display: block;
+        width: 100%;
+    }
+
+    .favorite {
+        padding: 1rem;
+    }
+
+    .favorite__icon {
+        margin-top: 2rem;
+    }
+
+    /* ========== Left ========== */
+
+    .left {
+        width: 100%;
+    }
+
+    .more-link {
+        margin: 2.5rem;
+    }
+
+    /* ========== Activite ========== */
+    .activite {
+        margin: 0;
+        width: 100%;
+
+    }
+
+    /* ========== Card ========== */
+    .card1 {
+        width: 95%;
+        height: 15vh;
+        margin: 2rem auto;
+    }
+
+    .card2 {
+        width: 95%;
+        height: 250px;
+        margin: 2rem 0;
+        box-shadow: 2px 2px 2px #e6e7e9;
+    }
+
+    .card2__picture {
+        height: 70%;
+    }
+
+    .card2__info {
+        height: 30%;
+        padding: 1rem 0 0 1rem;
+    }
+
+    .card2__info-title {
+        margin: 0.5rem;
+        line-height: 1;
+    }
+
+    .card2__info-para,
+    .card2__info-note {
+        margin: 0.5rem;
+    }
+
+    .card3 {
+        width: 88vw;
+        height: 25vh;
+        margin: 3rem 0;
+        
+    }
+
+    /* .link-card1 {
+        /* width: 250px; */
+
+
+    
+
+    /* .link-card2 {
+        /* width: 100%; */
+
+    /* }  */
+
+    .link-card3 {
+        width: 100%;
+
+    }
+
+    /* ========== Activite ========== */
+
+    /* .activite .section-title {
+        
+      } */
+
+    .grid {
+        display: block;
+        margin: 0 2rem;
+    }
+
+    /* ==================== Footer ====================== */
+
+    .footer {
+        width: 100%;
+        padding: 3rem 0 5rem 0;
+        display: block;
+        margin-top: 5rem;
+        background-color: #e6e7e9;
+    }
+
+    .footer-lien {
+        width: 90%;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+    }
+    
+    .footer-lien__para {
+        margin-left: 1rem;
+
+    }
+
+    .footer-lien__title {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+
+    /* ==================== Header ====================== */
+
+    .header {
+        display: block;
+        text-align: center;
+    }
+
+    /* ========== Brand ========== */
+
+    .brand {
+
+        width: 100%;
+        
+    }
+    
+    .brand__logo-link img {
+        width: 25vw;
+        text-align: center;
+    } 
+        /* font-size: 20rem;
+
+    /* ========== Filter ========== */
+
+    .filter__cap {
+        width: 40%;
+    }
+    .filter__cap-icon {
+        font-size: 1.4rem;
+        padding: .5rem;
+        border: none;
+        background-color: #F0F2F6;
+    }
+    /* ========== Card ========== */
+    
+    /* .card3 {
+        width: 100%;
+        height: 250px;
+        
+    } */
+
+}
